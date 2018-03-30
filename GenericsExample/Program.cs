@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericsExample
 {
@@ -12,6 +8,20 @@ namespace GenericsExample
         {
             var arrayOfInt = new ArrayOfThings<int>(10);
             var arrayOfString = new ArrayOfThings<string>(10);
+
+            var listOfInt = new ListOfThings<int>();
+
+            for (var i = 0; i < 5; i++)
+            {
+                listOfInt.Add(i);
+            }
+
+            for (var i = 0; i < 5; i++)
+            {
+                Console.WriteLine(listOfInt.GetItem(i));
+            }  
+            
+            Console.ReadKey();
 
             for (var i = 0; i < 10; i++)
             {
